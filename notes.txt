@@ -1,0 +1,15 @@
+THE DJANGO ADMIN DOCUMENT GENERATOR:
+
+    DJANGO ADMIN'S DOCS APP PULLS DOCUMENTATIONS FROM THE DOCSTRING  OF MODEL, VIEWS, TEMPLATE TAG ETC FROM ANY APP IN INSTALLED_APP AND MAKE THAT DOCUMENTATIONS AVAILABLE FROM THE DJANGO ADMIN
+
+     "django.contrib.admindocs", add to INSTALLED_APP
+     and have to add urls => path('admin/doc/', include('django.contrib.admindocs.urls'))
+
+    path("admin/doc/", include('django.contrib.admindocs.urls')),
+    path("admin/", admin.site.urls),
+
+    pip install docutils
+
+    add this to middleware this is optional
+    using admindocs bookmarkets
+    "django.contrib.admindocs.middleware.XViewMiddleware",
